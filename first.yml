@@ -1,0 +1,22 @@
+- hosts:
+    - web
+  gather_facts: false 
+  tasks:
+#   - action: ping
+    - name: Ping nodes
+      action: ping
+    - name: Create Empty File
+      file:
+       path: /root/test.txt
+       state: touch
+    - name: Copy my ansible files from source folder
+      copy:
+       src: /root/copyme.txt
+       dest: /root/file1.txt
+    - name: COPY FOLDER
+      copy:
+        src: /root/newfolder
+        dest: /root
+        owner: root
+        group: root
+        mode: 0744

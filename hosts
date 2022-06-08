@@ -1,0 +1,11 @@
+[web]
+ansnode1
+ansnode2
+
+[db]
+ansnode3
+
+
+#Define a variable
+#[web:vars]
+#ansible_user=vishal ansible _pass=vishal
